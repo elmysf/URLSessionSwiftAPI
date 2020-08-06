@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
 @IBOutlet weak var weatherpred: UILabel!
+    @IBOutlet weak var desc: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -34,7 +36,8 @@ class ViewController: UIViewController {
                     let description = weatherData.weather?[0].description
                     //set value
                     DispatchQueue.main.async {
-                        self.weatherpred.text = "\(temp)"
+                        self.weatherpred.text = "\(temp)˚"
+                        self.desc.text = "\(description)"
                     }
                     print(description)
                 } catch let err {
