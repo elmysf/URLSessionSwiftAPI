@@ -39,7 +39,7 @@ class ViewController: UIViewController {
                         self.weatherpred.text = "\(temp)˚"
                         self.desc.text = "\(description)"
                     }
-                    print(description)
+                    //print(description)
                 } catch let err {
                     print("Error", err)
                 }
